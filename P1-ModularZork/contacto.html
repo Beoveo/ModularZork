@@ -1,0 +1,60 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+	<title>
+		
+		Contacto
+	</title>
+	<!-- La informacion acerca de como realizar los formularios ha sido tomada de-->
+	<!--varias paginas web placeholder: introduce un "texto por defecto"-->
+	<!-- que desaparece en el momento en el que usuario empiece a escribir.-->
+	<meta charset="utf-8">
+	<link rel="stylesheet"  href="default.css">
+</head>
+<body>
+	<div class ="contenedor">
+		<header>
+			<a href="index.html">
+				<img id="logo" src="img/logoM.png" alt=" "/>
+			</a>
+		</header>
+		<nav>
+			<div class="topnav" id="barra">
+				<a href="index.html" class="button" >Inicio</a>
+				<a href="detalles.html" class="button" >Detalles</a>
+				<a href="bocetos.html" class="button" >Bocetos</a>
+				<a href="miembros.html" class="button" >Miembros</a>
+				<a href="planificacion.html" class="button" >Planificacion</a>
+				<a href="contacto.html" class="button active" >Contacto</a>
+			</div>
+		</nav>
+		<div class="contenido">
+			<form action="mailto:contactomz@gmail.com" method="post" enctype="text/plain">
+				<p>Nombre: </p> <input type="text" size="15" maxlength="30" value="" name="nombre"/>
+				<p>Dirección de email de contacto: </p>
+
+				<input type="text" size="20" maxlength="30" value="" name="correo" placeholder="micorreo@gmail.es">
+				<p>Motivo de la consulta: </p>
+
+				<p>
+					<input type="radio" name="consulta" value="evaluacion" 
+					checked="checked" /> Evaluación
+
+					<input type="radio" name="consulta" value="sugerencias" /> Sugerencias
+
+					<input type="radio" name="consulta" value="criticas" /> Críticas
+				</p>
+
+				<p>Escribe tu consulta:</p>
+				<textarea name="consulta-texto" placeholder="Escribe aquí tu consulta"></textarea>
+
+				<p><input name="condiciones" type="checkbox" value="aceptadas"/> Acepto los terminos y condiciones.</p>
+
+				<p>
+					<input type="reset" name="borrar" value="Borrar formulario">
+					<input type="submit" value="Enviar">
+				</p>
+			</form>
+		</div>
+	</div>
+</body>
