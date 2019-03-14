@@ -6,7 +6,7 @@
 	<h1>Modular ZORK</h1>
 	
     <div id="menu">
-	   
+	   	<!-- Para los enlaces de la barra de menu -->
 	    <a href="index.php" class="button active" >Inicio</a>
 	    <a href="juego.php" class="button" >Juego</a>
 	    <a href="ranking.php" class="button" >Ranking</a>

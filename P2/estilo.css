@@ -4,6 +4,29 @@ body {
 
 }
 
+/* Fuente: https://lenguajecss.com/p/css/propiedades/grid-css */
+.grid {
+	display: grid;
+  /*grid-template-columns: 50px 300px;
+  grid-template-rows: 200px 75px;
+ 
+  //Esto limita el reordenamiento..
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "head head"
+                       "menu main"
+                       "foot foot";
+ */
+  align-items: strech;
+  
+  min-height: 250px; 
+  max-width: 250px;
+}
+.a { grid-area: head; background: blue }
+.b { grid-area: menu; background: red }
+.c { grid-area: main; background: green }
+.d { grid-area: foot; background: orange }
+
 div#contenedor {
 
 	width: 1350px;

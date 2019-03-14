@@ -14,7 +14,6 @@
 	<body>
 		<div id="contenedor">
 			
-			
 			<?php
 				include('cabecera.php');
 				include('sidebarIzq.php');
@@ -38,7 +37,6 @@
 			</div>
 
 			<?php 
-				
 				include("pie.php");
 			?>
 
