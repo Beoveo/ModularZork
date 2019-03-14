@@ -16,8 +16,11 @@
 			
 			<?php
 				include('cabecera.php');
-				include('sidebarIzq.php');
+				
 			?>
+			<div class="caja">
+				<?php include('sidebarIzq.php'); ?>
+			</div>
 
 			<div id="contenido">
 				<h1>Página principal</h1>

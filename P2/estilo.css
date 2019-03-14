@@ -4,29 +4,94 @@ body {
 
 }
 
+/* //MODIFICACIONES
+.caja{
+	display:flex;
+}*/
+
 /* Fuente: https://lenguajecss.com/p/css/propiedades/grid-css */
 .grid {
-	display: grid;
-  /*grid-template-columns: 50px 300px;
-  grid-template-rows: 200px 75px;
- 
-  //Esto limita el reordenamiento..
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "head head"
-                       "menu main"
-                       "foot foot";
- */
-  align-items: strech;
-  
-  min-height: 250px; 
-  max-width: 250px;
-}
-.a { grid-area: head; background: blue }
-.b { grid-area: menu; background: red }
-.c { grid-area: main; background: green }
-.d { grid-area: foot; background: orange }
+  	max-width: 250px;
+	max-height: 700px;
+	min-width: 100px;
+	min-height: 300px;
 
+}
+
+.a { 
+  	border:solid 5px #ccc;
+ 	border-radius:15px;
+  	box-shadow: 6px 6px 8px 0px #818181;	
+  
+ 	background: grey;
+
+	min-height: 50px; 
+  	max-width: 50px;
+}
+
+div#eligemapa{
+
+	display:inline-block;
+	margin:70px 20px 20px 20px;
+	width:300px;
+	min-height:550px;
+	box-shadow: 2px 2px 2px #000000;
+	background:#dddddd;
+	padding: 10px 50px;
+	border-radius: 5px;
+	float: left;
+
+}
+
+div#eligemonstruo{
+
+	display:inline-block;
+	margin:70px 20px 20px 20px;
+	width:300px;
+	min-height:245px;
+	box-shadow: 2px 2px 2px #000000;
+	background:#dddddd;
+	padding: 10px 50px;
+	border-radius: 5px;
+	
+
+}
+
+div#eligeobjeto{
+
+	display:inline-block;
+	margin:20px 20px 20px 20px;
+	width:300px;
+	min-height:245px;
+	box-shadow: 2px 2px 2px #000000;
+	background:#dddddd;
+	padding: 10px 50px;
+	border-radius: 5px;
+
+}
+
+div#contenidocreacion {
+	/*contiene elige mapa, monstruo y objetos, es invisible
+		para ver tamaño (visual) usar:	border: 1px solid black;
+	*/
+	width: 930px;
+	background-color: #aaaaaa;
+	margin: auto; 
+	margin-left: 275px;
+	margin-top: 10px;
+}
+
+div#contenidoboton {
+	display:inline-block;
+	margin:5px 5px 5px 5px;
+	width:200px;
+	min-height:30px;
+	padding: 10px 50px;
+	border-radius: 5px;
+	float: center;
+}
+
+/****************************************************************************/
 div#contenedor {
 
 	width: 1350px;
@@ -82,10 +147,11 @@ div#cabecera a:hover {
 
 
 div#sidebar-left {
+	/*display:flex;*/
 	padding: 10px;
 	float: left;
-	width: 250px;
-	height: 700px;
+	min-width: 250px;
+	min-height: 700px;
 	background-color: #dddddd;
 }
 
