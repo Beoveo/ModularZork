@@ -1,0 +1,22 @@
+<div id="ranking">
+    <ul>
+        <li>
+            1.Alberto
+        </li>
+                <li>
+            2.Lidia
+        </li>
+                <li>
+            3.Miguel
+        </li>
+                <li>
+            4.Georgi
+        </li>
+         <li>
+            5.Agustin
+        </li>
+        <li>
+            6.Beatriz
+        </li>
+    </ul>
+</div>
