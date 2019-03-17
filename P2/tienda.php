@@ -21,13 +21,13 @@
 
 			<div id="contenido">
 				<div id="mapas">
-
+					<h1>Mapas</h1>
 				</div>
 				<div id="personajes">
-					
+					<h1>Personajes</h1>
 				</div>
 				<div id="objetos">
-					
+					<h1>Objetos</h1>
 				</div>
 			</div>
 
