@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="estilo.css" />
+<link rel="stylesheet" type="text/css" href="estiloPractica.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Portada</title>
 </head>
@@ -31,18 +31,14 @@
 	
 	<div id="contenido">
 		<h1>Dudas más frecuentes</h1>
-		<ul>
-			<li><a href ='objetivo.php'>Objetivo del juego</a></li>
-			<li><a href ='creacion.php'>Creación</a></li>
-			<li><a href ='ranking.php'>Ranking</a></li>
-			<li><a href ='compras.php'>Compras</a></li>
+		<ul class= "principal">
+			<li><a href ='objetivo.php'><h3>Objetivo del juego</h3></a></li>
+			<li><a href ='creacion.php'><h3>Creación</h3></a></li>
+			<li><a href ='ranking.php'><h3>Ranking</h3></a></li>
+			<li><a href ='compras.php'><h3>Compras</h3></a></li>
 
 			</div>
 	
-	<?php require_once('sidebarDer.php')?>
-	<!--<div id="sidebar-right">
-		Texto del sidebar derecho.
-	</div>-->
 	
 	<?php require_once('pie.php')?>
 	<!--<div id="pie">
