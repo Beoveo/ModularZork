@@ -1,7 +1,5 @@
 
 
-
-
 <div id="cabecera">
 	<h1>Modular ZORK</h1>
 	
@@ -23,7 +21,6 @@
 			else{
 				echo "Usuario desconocido. <a href='login.php'>Login</a>";
 			}
-		
 		?>	
 	</div>
 </div>
