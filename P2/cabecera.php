@@ -1,7 +1,5 @@
 
 
-
-
 <div id="cabecera">
 	<h1>Modular ZORK</h1>
 	
