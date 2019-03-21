@@ -3,13 +3,14 @@
 	<h3>Navegación</h3>
 
 	<!-- La idea es hacer un grid 4x6-->
-	<div class="grid"> <!-- contenedor -->
-		<!-- cada uno de los ítems del grid -->
-		<div class="a">Item 1</div> 
-		<div class="a">Item 2</div>
-		<div class="a">Item 3</div>
-		<div class="a">Item 4</div>
+	<div class="grid"> <!-- https://codepen.io/cssgrid/pen/kkqqBk -->
+		<ul class="list">
+			<!-- por cada elemento creamos 1 list-item -->
+			<?php 
+				for($i = 0; $i < 10; $i++){
+					require("incluirObjetos.php");
+				}
+			?>
+		</ul>
 	</div>
-
-
 </div>

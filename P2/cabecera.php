@@ -7,7 +7,7 @@
 	    <a href="juego.php" class="button" >Juego</a>
 	    <a href="ranking.php" class="button" >Ranking</a>
 	    <a href="tienda.php" class="button" >Tienda</a>
-	    <a href="creacion.php" class="button" >Creación</a>
+	    <a href="seleccionCreacion.php" class="button" >Creación</a>
 	    <a href="ayuda.php" class="button" >Ayuda</a>
     </div>
 

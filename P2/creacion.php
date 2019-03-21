@@ -23,7 +23,7 @@ session_start();
 				<div id="contenidocreacion">
 
 					<div id="pantalla">
-						<img src="img/fondo.png" alt="">
+						<img src="img/fondo.jpg" alt="">
 					</div>
 
 					<div id="pregunta">
