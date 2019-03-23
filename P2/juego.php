@@ -6,9 +6,10 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="estilos.css" />
-		<link rel="stylesheet" type="text/css" href="formEstilos.css" />
+		<link rel="stylesheet" type="text/css" href="game.css" />
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>Portada</title>
+		<title>Modular Zork</title>
 	</head>
 
 	<body>
@@ -21,15 +22,12 @@
 			?>
 
 			<div id="contenido">
-				<h1>Dale a Jugar para empezar</h1>
-				<a href="jugar.php" class="button" >Jugar!!</a>
-
-			</div>
-
-			<div id="contenido">
-				<?php
-					include('formulario.php');
-				?>
+				<h1>Modular Zork</h1>
+				  <div id="subwrapper">
+					<div id="zork-area">
+						<button id="start">Start</button>
+					</div>
+				</div>
 
 			</div>
 
@@ -39,7 +37,7 @@
 			?>
 
 		</div> <!-- Fin del contenedor -->
-
+		<script type="text/javascript" src="zork/javascript/game.js"></script>
 	</body>
 </html>
 
