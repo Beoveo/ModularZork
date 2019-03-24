@@ -1,0 +1,404 @@
+body {
+	font-family: 'Helvetica Neue';
+	background-color: #CDCDCD;
+
+}
+
+/************************** AQUI EMPIEZAN LAS MODIFICACIONES DE BEA **************************************************/
+
+/*PANTALLA donde se va a jugar*/
+div#pantalla{
+	display:inline-block;
+	margin:0px 20px 20px 20px;
+	width:850px;
+	min-height:800px;
+	box-shadow: 2px 2px 2px #000000;
+	background:#dddddd;
+	padding: 10px 10px;
+	border-radius: 5px;
+}
+
+div#pantalla img{
+	max-width: 750px;
+	max-height: 700px;
+	margin: 15px 5px 5px 5px;
+	border: 5px solid black;
+	border-radius: 10px;
+
+}
+
+div#pregunta{
+	display:inline-block;
+	margin:5px 5px 5px 5px;
+	width:750px;
+	min-height:100px;
+	box-shadow: 2px 2px 2px #000000;
+	background:#dddddd;
+	padding: 10px 10px;
+	border-radius: 5px;
+}
+
+div#respuesta{
+	display:inline-block;
+	margin:5px 5px 5px 45px;
+	width:400px;
+	min-height:100px;
+	box-shadow: 2px 2px 2px #000000;
+	background:#dddddd;
+	padding: 10px 10px;
+	border-radius: 5px;
+}
+
+div#eligemapa{
+
+	display:inline-block;
+	margin:10px 20px 20px 20px;
+	width:300px;
+	min-height:550px;
+	box-shadow: 2px 2px 2px #000000;
+	background:#dddddd;
+	padding: 10px 50px;
+	border-radius: 5px;
+	float: left;
+
+}
+
+div#seleccionMapa{
+	display:block;
+	margin:0px 0px 10px 10px;
+	width:300px;
+	min-height:100px;
+	box-shadow: 2px 2px 2px #000000;
+	background:#dddddd;
+	border-radius: 5px;
+	float: left;
+	text-align: center;
+}
+
+/* Radio buttons (img)*/
+/*https://es.stackoverflow.com/questions/42212/c%C3%B3mo-incrustar-una-imagen-dentro-de-los-checkbox*/
+.checkeable input {
+  display: none; /*si pones "block", aparece una casilla de check*/
+}
+.checkeable img {
+  width: 50px;
+  margin: 10px 10px 10px 10px;
+  border: 5px solid transparent;
+}
+
+.checkeable input:checked  + img {
+  border-color: blue;
+  width: 50px;
+}
+
+div#eligemonstruo{
+
+	display:inline-block;
+	margin:10px 20px 5px 20px;
+	max-width:300px;
+	min-height:245px;
+	box-shadow: 2px 2px 2px #000000;
+	background:#dddddd;
+	padding: 10px 50px;
+	border-radius: 5px;
+}
+
+div#eligeobjeto{
+
+	display:inline-block;
+	margin:0px 20px 20px 20px;
+	max-width:300px;
+	min-height:245px;
+	box-shadow: 2px 2px 2px #000000;
+	background:#dddddd;
+	padding: 10px 50px;
+	border-radius: 5px;
+	float: center;
+
+}
+
+div#contenidocreacion {
+	width: 930px;
+	background-color: #aaaaaa;
+	margin: auto; 
+	margin-left: 275px;
+	margin-top: 10px;
+}
+
+div#contenidocreacion h1{
+	margin: 0px 15px 10px 20px;
+}
+
+div#contenidocreacion input[type="submit"] {
+   background-color: #10C768;
+   border: none;
+   border-radius: 6px;
+   color: white;
+   display: inline-block;
+   font-size: 15px;
+   height: 30px;
+   margin-left: 10px;
+   margin-right: 10px;
+   margin-top: 20px;
+   text-align: center;
+   width: 80px;
+}
+
+div#contenidoboton {
+	display:inline-block;
+	margin:5px 5px 5px 5px;
+	width:200px;
+	min-height:30px;
+	padding: 10px 50px;
+	border-radius: 5px;
+	float: left;
+}
+
+/* Botón */
+
+input[type="submit"] {
+   background-color: rgb(170, 20, 93);
+   border: none;
+   border-radius: 6px;
+   color: white;
+   display: block;
+   font-size: 1em;
+   height: 3em;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: -10px;
+   text-align: center;
+   width: 150px;
+}
+
+input[type="submit"]:hover {
+   cursor: pointer;
+   background-color: rgb(204, 69, 134);
+   opacity: 0.8;
+}
+
+/* Contenedor del menu*/
+div#menuIzq {
+	min-width:50px;	
+	padding: 30px 10px 10px 10px;
+}
+
+/* Este div es para el estilo de los botones del menu*/
+div#botonSideBarIzq a{
+	vertical-align: text-bottom;
+
+	background-color: #A4A4A4;
+	float: auto;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 10px 10px 10px 10px;
+	font-size: 14px;
+
+}
+
+div#sidebar-left {
+	padding: 10px;
+	float: left;
+	max-width: 250px;
+	min-height: 805px; /*si no consigo hacer que se hagan mas peques los items, ponerlo a min*/
+	background-color: #dddddd;
+}
+
+div#sidebar-left a, div#sidebar-left a:visited {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+} 
+
+/* Cambia el color del texto en los botones del menu*/
+div#sidebar-left a:hover {
+	color: red;
+	text-decoration: underline;
+} 
+
+/*Contenido lateral,GRID*/
+div#sidebar-left ul, li {
+  padding: 5px;
+  list-style: none;
+}
+
+/*Contiene la lista*/
+div#grid {
+	margin: 5px 5px 5px 25px;
+}
+/*Flex items*/
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.list-item {
+	border: 3px solid black;
+}
+/*
+.list-item {
+	display: flex; 
+  	padding: 0.5em;
+	width: 100%;
+}*/
+
+
+/* Esto sirve para mover los objetos al cambiar el tam de pagina.*/
+@media all and (min-width: 40em) {
+  .list-item {
+    width: 55%;
+  }
+}
+@media all and (min-width: 60em) {
+  .list-item {
+    width: 33.33%;
+  }
+}
+
+.list-content {
+	background-color: #0000;
+  	flex-direction: column;
+  	padding: 1em;
+	width: 100%;
+}
+
+/*
+.list-content p {
+	flex: 1 0 auto;
+}*/
+
+/* Contenido eventos*/
+div#sidebar-left img{
+	margin: 5px 5px 5px 5px;
+	max-width: 350px;
+	max-height: 350px; /*si no consigo hacer que se hagan mas peques los items, ponerlo a min*/
+}
+
+div#contenidoNoticias{
+	margin: 5px 5px 5px 5px;
+}
+/************************** AQUI ACABAN LAS MODIFICACIONES DE BEA **************************************************/
+div#contenedor {
+
+	width: 1350px;
+	margin: auto;
+	border: 1px solid black;
+	background-color: #aaaaaa;
+	margin-top: 30px;
+}
+
+
+div#cabecera {
+
+	padding: 30px;
+	height: 100px;
+	background-color: #303030;
+	color: white;
+}
+header{
+	font-size: 30px;
+}
+
+div#cabecera img{
+	
+	margin:left; 
+	width:50px;
+	height:50px;
+}
+div#menu a{
+	 vertical-align: text-top;
+
+	background-color: #555;
+	float: auto;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 20px;
+	font-size: 14px;
+
+}
+
+
+
+
+div#cabecera a, div#cabecera a:visited {
+
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+} 
+
+div#cabecera a:hover {
+	color: red;
+	font-weight: bold;
+	text-decoration: underline;
+} 
+
+
+
+
+
+div#pie a {
+	color: white;
+}
+
+
+
+
+div#contenido {
+	display:inline-block;
+	margin:20px 20px 20px 20px;
+	width:900px;
+	min-height:600px;
+	box-shadow: 2px 2px 2px #000000;
+	background:#dddddd;
+	padding: 10px 50px;
+	border-radius: 5px;
+
+	/*padding: 10px;
+	float: left;
+	min-height: 600px;
+	width: 690px;
+	background-color: white;*/
+}
+
+
+
+div#pie {
+	clear: both;
+	padding: 20px;
+	background-color: #303030;
+	color: white;
+	text-align: center;
+}
+
+div.saludo {
+	width: 100%;
+	text-align: right;
+}
+
+fieldset {
+	border: 1px solid black;
+	width: 15em;
+	margin: 0 auto;
+
+}
+
+legend {
+	color: #fff;
+	background: #303030;
+	border: 1px solid black;
+	padding: 2px 6px;
+} 
+
+label {
+	width: 4em;
+	float: left;
+	text-align: right;
+	margin-right: 0.5em;
+	display: block;
+}
+
+button {
+
+	margin-left: 100px;
+} 
+
