@@ -1,0 +1,1 @@
+Aquí se explicará como funciona y los objetivos del juego

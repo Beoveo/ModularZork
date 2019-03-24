@@ -1,0 +1,1 @@
+Aquí se explicará cómo funciona el ranking
