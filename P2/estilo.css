@@ -6,95 +6,53 @@ body {
 
 /*//MODIFICACIONES*/
 
-
-
-/*Acabar de configurar*/
-
-/* GRID */
-/* Grid 1
-.grid {
-  display: grid;
-  justify-content: center;
-  margin: 5px 5px 5px 5px;
-  grid-gap: 40px;
-  grid-template-columns: repeat(6, 10vw);
-  grid-template-rows: repeat(5, 10vw);
-  max-width: 270px;
-}
-
-.item {
-  position: relative;
-  background-color: blue;
-  box-shadow: 10px 10px var(--shadow);
-   max-width: 150px;
-
-}
-
-
-//GRID 2
-.grid {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-}
-
-.grid > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
-}
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-}
-.grid > div {
-  flex: 1 1 200px;
-}*/
-
-
 /*PANTALLA donde se va a jugar*/
 div#pantalla{
 	display:inline-block;
 	margin:70px 20px 20px 20px;
-	width:300px;
-	min-height:550px;
+	width:850px;
+	min-height:800px;
 	box-shadow: 2px 2px 2px #000000;
 	background:#dddddd;
 	padding: 10px 50px;
 	border-radius: 5px;
 }
 
-/* CONTENEDOR DE LA PREGUNTA */
+div#pantalla img{
+	max-width: 750px;
+	max-height: 700px;
+	margin: 15px 5px 5px 5px;
+	border: 5px solid black;
+	border-radius: 10px;
+
+}
+
 div#pregunta{
 	display:inline-block;
 	margin:70px 20px 20px 20px;
-	width:300px;
-	min-height:550px;
+	width:850px;
+	min-height:800px;
 	box-shadow: 2px 2px 2px #000000;
 	background:#dddddd;
 	padding: 10px 50px;
 	border-radius: 5px;
 }
 
-/* CONTENEDOR DE LA RESPUESTA */
 div#respuesta{
 	display:inline-block;
 	margin:70px 20px 20px 20px;
-	width:300px;
-	min-height:550px;
+	width:850px;
+	min-height:800px;
 	box-shadow: 2px 2px 2px #000000;
 	background:#dddddd;
 	padding: 10px 50px;
 	border-radius: 5px;
-
 }
 
 div#eligemapa{
 
 	display:inline-block;
-	margin:70px 20px 20px 20px;
+	margin:10px 20px 20px 20px;
 	width:300px;
 	min-height:550px;
 	box-shadow: 2px 2px 2px #000000;
@@ -105,13 +63,26 @@ div#eligemapa{
 
 }
 
+div#seleccionMapa{
+	display:block;
+	margin:0px 0px 10px 10px;
+	width:300px;
+	min-height:100px;
+	box-shadow: 2px 2px 2px #000000;
+	background:#dddddd;
+	border-radius: 5px;
+	float: left;
+	text-align: center;
+}
+
 /* Radio buttons (img)*/
 /*https://es.stackoverflow.com/questions/42212/c%C3%B3mo-incrustar-una-imagen-dentro-de-los-checkbox*/
 .checkeable input {
-  display: block;
+  display: none; /*si pones "block", aparece una casilla de check*/
 }
 .checkeable img {
-  width: 100px;
+  width: 50px;
+  margin: 10px 10px 10px 10px;
   border: 5px solid transparent;
 }
 
@@ -123,31 +94,30 @@ div#eligemapa{
 div#eligemonstruo{
 
 	display:inline-block;
-	margin:70px 20px 20px 20px;
-	width:350px;
+	margin:10px 20px 5px 20px;
+	max-width:300px;
 	min-height:245px;
 	box-shadow: 2px 2px 2px #000000;
 	background:#dddddd;
 	padding: 10px 50px;
 	border-radius: 5px;
-
 }
 
 div#eligeobjeto{
 
 	display:inline-block;
-	margin:20px 20px 20px 20px;
-	width:350px;
+	margin:0px 20px 20px 20px;
+	max-width:300px;
 	min-height:245px;
 	box-shadow: 2px 2px 2px #000000;
 	background:#dddddd;
 	padding: 10px 50px;
 	border-radius: 5px;
+	float: center;
 
 }
 
 div#contenidocreacion {
-	
 	width: 930px;
 	background-color: #aaaaaa;
 	margin: auto; 
@@ -162,7 +132,7 @@ div#contenidoboton {
 	min-height:30px;
 	padding: 10px 50px;
 	border-radius: 5px;
-	float: center;
+	float: left;
 }
 
 /* Botón */
@@ -218,12 +188,31 @@ div#cabecera img{
 }
 div#menu a{
 	 vertical-align: text-top;
-	
+
 	background-color: #555;
 	float: auto;
 	color: #f2f2f2;
 	text-align: center;
 	padding: 14px 20px;
+	font-size: 14px;
+
+}
+
+/* Contenedor del menu*/
+div#menuIzq {
+	min-width:50px;	
+	padding: 30px 10px 10px 10px;
+}
+
+/* Este div es para el estilo de los botones del menu*/
+div#botonSideBarIzq a{
+	vertical-align: text-bottom;
+
+	background-color: #A4A4A4;
+	float: auto;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 10px 10px 10px 10px;
 	font-size: 14px;
 
 }
@@ -247,35 +236,39 @@ div#sidebar-left {
 	padding: 10px;
 	float: left;
 	max-width: 250px;
-	min-height: 700px; /*si no consigo hacer que se hagan mas peques los items, ponerlo a min*/
+	min-height: 805px; /*si no consigo hacer que se hagan mas peques los items, ponerlo a min*/
 	background-color: #dddddd;
 }
 
 div#sidebar-left a, div#sidebar-left a:visited {
-	color: red;
+	color: white;
 	font-weight: bold;
 	text-decoration: none;
 } 
 
+/* Cambia el color del texto en los botones del menu*/
 div#sidebar-left a:hover {
 	color: red;
 	text-decoration: underline;
 } 
 
-/*Contenido lateral*/
+/*Contenido lateral,GRID*/
 div#sidebar-left ul, li {
-  margin: 0;
-  padding: 0;
+  padding: 5px;
   list-style: none;
 }
 
+/*Contiene la lista*/
+div#grid {
+	margin: 5px 5px 5px 25px;
+}
 /*Flex items*/
 .list {
   display: flex;
   flex-wrap: wrap;
 }
 .list-item {
-	border: 1px solid black;
+	border: 3px solid black;
 }
 /*
 .list-item {
@@ -285,9 +278,10 @@ div#sidebar-left ul, li {
 }*/
 
 
+/* Esto sirve para mover los objetos al cambiar el tam de pagina.*/
 @media all and (min-width: 40em) {
   .list-item {
-    width: 50%;
+    width: 55%;
   }
 }
 @media all and (min-width: 60em) {
@@ -298,7 +292,6 @@ div#sidebar-left ul, li {
 
 .list-content {
 	background-color: #0000;
-  	/*display: flex;*/
   	flex-direction: column;
   	padding: 1em;
 	width: 100%;
@@ -309,6 +302,16 @@ div#sidebar-left ul, li {
 	flex: 1 0 auto;
 }*/
 
+/* Contenido eventos*/
+div#sidebar-left img{
+	margin: 5px 5px 5px 5px;
+	max-width: 350px;
+	max-height: 350px; /*si no consigo hacer que se hagan mas peques los items, ponerlo a min*/
+}
+
+div#contenidoNoticias{
+	margin: 5px 5px 5px 5px;
+}
 
 
 div#pie a {

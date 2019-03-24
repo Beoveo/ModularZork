@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!-- Segunda pantalla de creacion -->
 
 <!DOCTYPE html>
@@ -16,9 +12,8 @@ session_start();
 	<div id="contenedor">
 
 		<?php
-		include('cabecera.php');
-				include('sidebarIzq.php'); //Aqui va el grid
-				?>
+			include('cabecera.php');
+			include('sidebarIzq.php'); ?>
 
 				<div id="contenidocreacion">
 
