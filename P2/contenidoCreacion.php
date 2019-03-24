@@ -99,11 +99,11 @@
 		</center>
 	</div>
 	<center>
-	<div id="contenidoboton">
-		<form action="creacion.php" method="POST">
-			<p><input type="submit" value="CREAR" ></p>
-		</form>
-	</div>
+		<div id="contenidoboton">
+			<form action="creacion.php" method="POST">
+				<p><input type="submit" value="CREAR" ></p>
+			</form>
+		</div>
 	</center>
 </div>
 

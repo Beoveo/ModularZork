@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="estilo.css" />
+	<link rel="stylesheet" type="text/css" href="css/estilo.css" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Noticias</title>
 </head>
@@ -9,9 +9,9 @@
 <body>
 	<div id="contenedor">
 
-		<?php require_once("cabecera.php"); ?>
+		<?php require_once('cabecera.php'); ?>
 		<div id="sidebar-left">
-			<?php require_once("menuSideBarIzq.php"); ?>
+			<?php require_once('menuSideBarIzq.php'); ?>
 
 			<div id="contenidoNoticias">
 				<h1> Últimas noticias sobre el videojuego <em>Zork</em></h1>
@@ -22,8 +22,8 @@
 				</p>
 			</div>
 		</div> 
-		<?php require_once("contenidoCreacion.php"); 
-		require_once("pie.php"); ?>
+		<?php require_once('contenidoCreacion.php'); 
+		require_once('pie.php'); ?>
 	</div>
 </body>
 </html>
