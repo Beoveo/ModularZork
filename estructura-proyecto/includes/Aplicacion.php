@@ -86,7 +86,17 @@ class Aplicacion
     }
     include($this->dirInstalacion . '/'.$path);
   }
-
+  //para saber en que pagina actual estas
+  public function getPagAct()
+  {
+      return $_SESSION['pagina'] ?? '';
+        
+  }
+  //para cambiar la pagina actual y actualizar el contenido en funcion de la misma
+  public function setPagAct($paginanueva)
+  {
+      $_SESSION['pagina']=$paginanueva;   
+  }
   public function login(Usuario $user)
   {
     $_SESSION['login'] = true;

@@ -13,7 +13,7 @@
             <?php
                 if(!isset($_SESSION['login'])){
                     echo"<a href='login.php'class='button' >Inicia Sesion</a>
-                    <a href='registro.php'class='button' >Registrate</a>";
+                    <a href='signin.php'class='button' >Registrate</a>";
                 }
                 else{
                     echo"<a href='miPerfil.php'class='button' >Mi Perfil</a>

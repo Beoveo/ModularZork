@@ -1,15 +1,13 @@
-<?php
-use es\ucm\fdi\aw;
-
-$app = aw\Aplicacion::getSingleton();
-?>
-
 <div id="sidebar-left">
-	<h3>Navegación</h3>
-	<ul>
-		<li><a href="<?= $app->resuelve('/index.php')?>">Inicio</a></li>
-		<li><a href="<?= $app->resuelve('/contenido.php')?>">Ver contenido</a></li>
-		<li><a href="<?= $app->resuelve('/admin.php')?>">Administrar</a></li>
-		<li><a href="<?= $app->resuelve('/mensajes.php')?>">Mensajes</a></li>
-	</ul>
+	<?php require_once('menuSideBarIzq.php'); ?>
+	<div id="grid"> <!-- https://codepen.io/cssgrid/pen/kkqqBk -->
+		<ul class="list">
+			<!-- por cada elemento creamos 1 list-item -->
+			<?php 
+			for($i = 0; $i < 10; $i++){
+				require('incluirObjetos.php');
+			}
+			?>
+		</ul>
+	</div>
 </div>

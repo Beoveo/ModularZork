@@ -22,7 +22,7 @@ $app->logout();
 			<div id="contenido">
                 <h3>Mejores Jugadores</h3>
                 <?php
-                    $app->doInclude('comun/listaRanking.php');
+                    include('listaRanking.php');
                 ?>
                 
 			</div>

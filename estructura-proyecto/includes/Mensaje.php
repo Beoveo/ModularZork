@@ -92,7 +92,7 @@ class Mensaje
       $mensaje->id = $conn->insert_id;
       $result = $mensaje;
     } else {
-      error_log($conn->error);  
+      echo"$conn->error";  
     }
 
     return $result;
