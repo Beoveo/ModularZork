@@ -25,11 +25,11 @@ $app->doInclude('comun/sidebarIzq.php');
         </div>
         <div id=infoPerfil>
             <h3 id="agustin">Nombre de usuario: Agustin Jofre Millet</h3>
-            <a href='NuevosPHP/cambiarNombre.php'class='button' >Cambiar Nombre</a>
+            <a href='NuevosPHP/cambiarNombre.php'type='button' >Cambiar Nombre</a>
             <h3 id="correo">Correo Electronico: agustin@ucm.es</h3>
-            <a href='NuevosPHP/cambiarCorreo.php'class='button' >Cambiar Correo</a>
+            <a href='NuevosPHP/cambiarCorreo.php'type='button' >Cambiar Correo</a>
             <h3 id="agustin">Contraseña: *********</h3>
-            <a href='NuevosPHP/cambiarContraseña.php'class='button' >Cambiar Contraseña</a>
+            <a href='NuevosPHP/cambiarContraseña.php'type='button' >Cambiar Contraseña</a>
         </div>
 	</div>
 <?php

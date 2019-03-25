@@ -8,17 +8,19 @@ class Usuario
 {
 
     
-  public static function signin($username, $password)
+  public static function signin($name,$username, $password)
   {
+
     if(!self::buscaUsuario($username)){
             $app = App::getSingleton();
             $conn = $app->conexionBd();
-            $query = sprintf("INSERT INTO Usuarios (usuario, contraseña) VALUES ('%s' , %s)",$conn->real_escape_string($username),$conn->real_escape_string($password));
+            $auxpass=password_hash($password,PASSWORD_DEFAULT);
+            $query = sprintf("INSERT INTO Usuarios (nombre,correo, contraseña) VALUES ('%s','%s' , '%s')",$conn->real_escape_string($name),$conn->real_escape_string($username),$conn->real_escape_string($auxpass));
             $rs = $conn->query($query);
             if ($rs) {
-                $user=new Usuario($conn->id, $username, $userpass);
-                $rs= $user;
-                return $rs;
+                echo"funciona";
+                $user= new Usuario($conn->id,$username, $auxpass); 
+                return $user;
             }
             else{
                 echo"$conn->error";
@@ -26,6 +28,7 @@ class Usuario
             }
     }
     else{
+        
         return false;
           
     }
@@ -37,12 +40,12 @@ class Usuario
     if ($user && $user->compruebaPassword($password)) {
       $app = App::getSingleton();
       $conn = $app->conexionBd();
-      $query = sprintf("SELECT R.nombre FROM RolesUsuario RU, Roles R WHERE RU.rol = R.id AND RU.usuario=%s", $conn->real_escape_string($user->id));
+      $query = sprintf("SELECT R.correo FROM RolesUsuario RU, Roles R WHERE RU.rol = R.id AND RU.usuario=%s", $conn->real_escape_string($user->id));
       $rs = $conn->query($query);
         echo "$conn->error";
       if ($rs) {
         while($fila = $rs->fetch_assoc()) { 
-          $user->addRol($fila['nombre']);
+          $user->addRol($fila['correo']);
         }
         $rs->free();
       }
@@ -55,7 +58,7 @@ class Usuario
   {
     $app = App::getSingleton();
     $conn = $app->conexionBd();
-    $query = sprintf("SELECT * FROM Usuarios WHERE usuario='%s'", $conn->real_escape_string($username));
+    $query = sprintf("SELECT * FROM Usuarios WHERE correo='%s'", $conn->real_escape_string($username));
     $rs = $conn->query($query);
     if ($rs && $rs->num_rows == 1) {
       $fila = $rs->fetch_assoc();

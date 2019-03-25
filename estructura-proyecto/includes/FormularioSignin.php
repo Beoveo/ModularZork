@@ -15,6 +15,7 @@ class FormularioSignin extends Form
   protected function generaCamposFormulario ($datos)
   {
     $username = 'examples@domain.org';
+      $name= 'Bicholoco';
       $password='';
       $password2='';
     if ($datos) {
@@ -26,7 +27,8 @@ class FormularioSignin extends Form
     $camposFormulario=<<<EOF
 		<fieldset>
 		  <legend>Usuario y contraseña</legend>
-		  <p><label>Name:</label> <input type="text" name="username" placeholder="$username"/></p>
+        <p><label>Nick: </label> <input type="text"        name="name" placeholder="$name"/></p>
+		  <p><label>e-mail:</label> <input type="text" name="username" placeholder="$username"/></p>
 		  <p><label>Password:</label> <input type="password" name="password"/><br /></p>
           <p><label>Repeat:</label> <input type="password" name="password2" /><br /></p>
 		  <button type="submit">Entrar</button>
@@ -47,6 +49,9 @@ EOF;
       $result[] = 'El nombre de usuario no es válido';
       $ok = false;
     }
+      
+    $name= $datos['name'] ?? '' ;
+      
     $password = $datos['password'] ?? $password;
     $password2 = $datos['password2'] ?? $password2;
     if ( $password != $password2 ||  mb_strlen($password) < 4 ) {
@@ -55,7 +60,7 @@ EOF;
       $ok = false;
     }
     if ( $ok ) {
-      $user = Usuario::signin($username, $password);
+      $user = Usuario::signin($name,$username,$password);
       if ( $user ) {
         // SEGURIDAD: Forzamos que se genere una nueva cookie de sesión por si la han capturado antes de hacer login
         session_regenerate_id(true);

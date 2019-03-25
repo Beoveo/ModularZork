@@ -45,13 +45,13 @@ EOF;
       $result[] = 'El nombre de usuario no es válido';
       $ok = false;
     }
-
     $password = $datos['password'] ?? '' ;
     if ( ! $password ||  mb_strlen($password) < 4 ) {
       $result[] = 'La contraseña no es válida';
       $ok = false;
     }
 
+      
     if ( $ok ) {
       $user = Usuario::login($username, $password);
       if ( $user ) {

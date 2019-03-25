@@ -149,3 +149,24 @@ button {
 
 	margin-left: 100px;
 } 
+
+ul#barIzq, li.izq, a.izq{
+	display:inline;
+	color:blue;
+	background-color: white;
+	float: left;
+	text-align: center;
+	padding: 5px 10px;
+}
+
+ul#principal, li.prin, a.prin{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-decoration:none;
+	color: black; 
+	font-weight: bold;
+	height:80px;
+    text-align: center;
+	font-size:xx-large;
+}
