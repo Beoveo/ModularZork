@@ -14,7 +14,8 @@ require_once __DIR__.'/includes/config.php';
 <?php
 $app->doInclude('comun/cabecera.php');
 $app->doInclude('comun/sidebarIzq.php');
-$app->doInclude('contenidos/contenidoAyuda.php');
+$app->setPagAct("inicio");
+$app->doInclude('contenidos/contenidoDesarrolladores.php');
 $app->doInclude('comun/sidebarDer.php');
 $app->doInclude('comun/pie.php');
 ?>

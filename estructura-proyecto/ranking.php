@@ -15,17 +15,13 @@ $app->logout();
 	<body>
 		<div id="contenedor">
 			<?php
-				$app->doInclude('comun/cabecera.php');
+                $app->doInclude('comun/cabecera.php');
                 $app->doInclude('comun/sidebarIzq.php');
+                $app->setPagAct("ranking");
+                $app->doInclude("contenidos/contenidoRanking.php");
+                $app->doInclude('comun/sidebarDer.php');
+                $app->doInclude('comun/pie.php');
 			?>
-
-			<div id="contenido">
-                <h3>Mejores Jugadores</h3>
-                <?php
-                    include('listaRanking.php');
-                ?>
-                
-			</div>
 		</div> <!-- Fin del contenedor -->
 
 	</body>

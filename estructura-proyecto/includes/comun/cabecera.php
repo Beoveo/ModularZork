@@ -17,6 +17,8 @@
                 }
                 else{
                     echo"<a href='miPerfil.php'class='button' >Mi Perfil</a>
+                     <a href='misCompras.php'class='button' >Mis Compras.</a>
+                     <a href='misCreaciones.php'class='button' >Mis creaciones.</a>
                     <a href='logout.php' class='button' >Cerrar Sesión</a>";
                 }
             ?>

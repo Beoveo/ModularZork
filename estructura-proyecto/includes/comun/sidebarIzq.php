@@ -1,13 +1,13 @@
-<?php
-use es\ucm\fdi\aw;
-
-$app = aw\Aplicacion::getSingleton();
-?>
-
 <div id="sidebar-left">
-    <ul id="barIzq">
-			<li class = "izq"><a href ='noticias.php'class = "button active">Noticias</a></li>
-			<li class = "izq"><a href ='eventos.php'class = "button">Eventos</a></li>
-			<li class = "izq"><a href ='cofre.php'class = "button">Cofre</a></li>
-    </ul>
+	<?php require_once('menuSideBarIzq.php'); ?>
+	<div id="grid"> <!-- https://codepen.io/cssgrid/pen/kkqqBk -->
+		<ul class="list">
+			<!-- por cada elemento creamos 1 list-item -->
+			<?php 
+			for($i = 0; $i < 10; $i++){
+				require('incluirObjetos.php');
+			}
+			?>
+		</ul>
+	</div>
 </div>

@@ -12,8 +12,58 @@ div#contenedor {
 	background-color: #aaaaaa;
 	margin-top: 30px;
 }
+/*****ALBERTO CAMBIOS CSS***/
+div#imagenFromulario
+{
+    float:left;
+}
+div#infoPerfil{
+    float:right;
+    
+}
+div#infoPerfil a{
+    background-color: #555;
+	float: auto;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 20px;
+	font-size: 14px;
+    margin-right:40px;
+}
+img#imgPerf{
+    width: 200px;
+    height: 200px;
+    
+}
+input[type="file"] {
+   background-color: rgb(170, 20, 93);
+   border: none;
+   border-radius: 6px;
+   color: white;
+   display: block;
+   font-size: 1em;
+   height: 3em;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: -10px;
+   text-align: center;
+   width: 150px;
+}
 
+div#sidebar-right {
+	padding: 10px;
+    float:right;
+	width: 250px;
+	height: 700px;
+	background-color: #dddddd;
+}
 
+div#sidebar-right a, div#sidebar-right a:visited {
+	color: gray;
+	font-weight: bold;
+	text-decoration: none;
+} 
+/*****ALBERTO CAMBIOS CSS***/
 div#cabecera {
 
 	padding: 30px;
@@ -53,42 +103,9 @@ div#cabecera a:hover {
 	text-decoration: underline;
 } 
 
-
-div#sidebar-left {
-	padding: 10px;
-	float: left;
-	width: 250px;
-	height: 700px;
-	background-color: #dddddd;
-}
-div#sidebar-left a, div#sidebar-left a:visited {
-	color: red;
-	font-weight: bold;
-	text-decoration: none;
-} 
-div#sidebar-right {
-	padding: 10px;
-	float: right;
-	width: 250px;
-	height: 700px;
-	background-color: #dddddd;
-}
-div#sidebar-right a, div#sidebar-right a:visited {
-	color: gray;
-	font-weight: bold;
-	text-decoration: none;
-} 
-
-div#sidebar-left a:hover {
-	color: red;
-	text-decoration: underline;
-} 
-
 div#pie a {
 	color: white;
 }
-
-
 
 
 div#contenido {
@@ -170,3 +187,352 @@ ul#principal, li.prin, a.prin{
     text-align: center;
 	font-size:xx-large;
 }
+
+/************************** AQUI EMPIEZAN LAS MODIFICACIONES DE BEA **************************************************/
+
+/*PANTALLA donde se va a jugar*/
+div#pantalla{
+	display:inline-block;
+	margin:0px 20px 20px 20px;
+	width:850px;
+	min-height:800px;
+	box-shadow: 2px 2px 2px #000000;
+	background:#dddddd;
+	padding: 10px 10px;
+	border-radius: 5px;
+}
+
+div#pantalla img{
+	max-width: 750px;
+	max-height: 700px;
+	margin: 15px 5px 5px 5px;
+	border: 5px solid black;
+	border-radius: 10px;
+
+}
+
+div#pregunta{
+	display:inline-block;
+	margin:5px 5px 5px 5px;
+	width:750px;
+	min-height:100px;
+	box-shadow: 2px 2px 2px #000000;
+	background:#dddddd;
+	padding: 10px 10px;
+	border-radius: 5px;
+}
+
+div#respuesta{
+	display:inline-block;
+	margin:5px 5px 5px 45px;
+	width:400px;
+	min-height:100px;
+	box-shadow: 2px 2px 2px #000000;
+	background:#dddddd;
+	padding: 10px 10px;
+	border-radius: 5px;
+}
+
+div#eligemapa{
+
+	display:inline-block;
+	margin:10px 20px 20px 20px;
+	width:300px;
+	min-height:550px;
+	box-shadow: 2px 2px 2px #000000;
+	background:#dddddd;
+	padding: 10px 50px;
+	border-radius: 5px;
+	float: left;
+
+}
+
+div#seleccionMapa{
+	display:block;
+	margin:0px 0px 10px 10px;
+	width:300px;
+	min-height:100px;
+	box-shadow: 2px 2px 2px #000000;
+	background:#dddddd;
+	border-radius: 5px;
+	float: left;
+	text-align: center;
+}
+
+/* Radio buttons (img)*/
+/*https://es.stackoverflow.com/questions/42212/c%C3%B3mo-incrustar-una-imagen-dentro-de-los-checkbox*/
+.checkeable input {
+  display: none; /*si pones "block", aparece una casilla de check*/
+}
+.checkeable img {
+  width: 50px;
+  margin: 10px 10px 10px 10px;
+  border: 5px solid transparent;
+}
+
+.checkeable input:checked  + img {
+  border-color: blue;
+  width: 50px;
+}
+
+div#eligemonstruo{
+
+	display:inline-block;
+	margin:10px 20px 5px 20px;
+	max-width:300px;
+	min-height:245px;
+	box-shadow: 2px 2px 2px #000000;
+	background:#dddddd;
+	padding: 10px 50px;
+	border-radius: 5px;
+}
+
+div#eligeobjeto{
+
+	display:inline-block;
+	margin:0px 20px 20px 20px;
+	max-width:300px;
+	min-height:245px;
+	box-shadow: 2px 2px 2px #000000;
+	background:#dddddd;
+	padding: 10px 50px;
+	border-radius: 5px;
+	float: center;
+
+}
+
+div#contenidocreacion {
+	width: 930px;
+	background-color: #aaaaaa;
+	margin: auto; 
+	margin-left: 275px;
+	margin-top: 10px;
+}
+
+div#contenidocreacion h1{
+	margin: 0px 15px 10px 20px;
+}
+
+div#contenidocreacion input[type="submit"] {
+   background-color: #10C768;
+   border: none;
+   border-radius: 6px;
+   color: white;
+   display: inline-block;
+   font-size: 15px;
+   height: 30px;
+   margin-left: 10px;
+   margin-right: 10px;
+   margin-top: 20px;
+   text-align: center;
+   width: 80px;
+}
+
+div#contenidoboton {
+	display:inline-block;
+	margin:5px 5px 5px 5px;
+	width:200px;
+	min-height:30px;
+	padding: 10px 50px;
+	border-radius: 5px;
+	float: left;
+}
+
+/* Botón */
+
+input[type="submit"] {
+   background-color: rgb(170, 20, 93);
+   border: none;
+   border-radius: 6px;
+   color: white;
+   display: block;
+   font-size: 1em;
+   height: 3em;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: -10px;
+   text-align: center;
+   width: 150px;
+}
+
+
+input[type="submit"]:hover {
+   cursor: pointer;
+   background-color: rgb(204, 69, 134);
+   opacity: 0.8;
+}
+
+/* Contenedor del menu*/
+div#menuIzq {
+	min-width:50px;	
+	padding: 30px 10px 10px 10px;
+}
+
+/* Este div es para el estilo de los botones del menu*/
+div#botonSideBarIzq a{
+	vertical-align: text-bottom;
+
+	background-color: #A4A4A4;
+	float: auto;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 10px 10px 10px 10px;
+	font-size: 14px;
+
+}
+
+div#sidebar-left {
+	padding: 10px;
+	float: left;
+	max-width: 250px;
+	min-height: 805px; /*si no consigo hacer que se hagan mas peques los items, ponerlo a min*/
+	background-color: #dddddd;
+}
+
+div#sidebar-left a, div#sidebar-left a:visited {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+} 
+
+/* Cambia el color del texto en los botones del menu*/
+div#sidebar-left a:hover {
+	color: red;
+	text-decoration: underline;
+} 
+
+/*Contenido lateral,GRID*/
+div#sidebar-left ul, li {
+  padding: 5px;
+  list-style: none;
+}
+
+/*Contiene la lista*/
+div#grid {
+	margin: 5px 5px 5px 25px;
+}
+/*Flex items*/
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.list-item {
+	border: 3px solid black;
+}
+/*
+.list-item {
+	display: flex; 
+  	padding: 0.5em;
+	width: 100%;
+}*/
+
+
+/* Esto sirve para mover los objetos al cambiar el tam de pagina.*/
+@media all and (min-width: 40em) {
+  .list-item {
+    width: 55%;
+  }
+}
+@media all and (min-width: 60em) {
+  .list-item {
+    width: 33.33%;
+  }
+}
+
+.list-content {
+	background-color: #0000;
+  	flex-direction: column;
+  	padding: 1em;
+	width: 100%;
+}
+
+/*
+.list-content p {
+	flex: 1 0 auto;
+}*/
+
+/* Contenido eventos*/
+div#sidebar-left img{
+	margin: 5px 5px 5px 5px;
+	max-width: 350px;
+	max-height: 350px; /*si no consigo hacer que se hagan mas peques los items, ponerlo a min*/
+}
+
+div#contenidoNoticias{
+	margin: 5px 5px 5px 5px;
+}
+/************************** AQUI ACABAN LAS MODIFICACIONES DE BEA **************************************************/
+/************************** Georgi  tabla de creaciones**************************************************/
+div.misCreaciones
+{
+            display: table;
+			width: 100%;
+}
+div.Table
+{
+        display: table;
+		width: 100%;
+}
+div.Title
+{
+        display: table-caption;
+        text-align: center;
+        font-weight: bold;
+        font-size: larger;
+}
+div.Heading
+{
+        display: table-row;
+        font-weight: bold;
+        text-align: center;
+}
+div.Row
+{
+        display: table-row;
+}
+div.Cell
+{
+        display: table-cell;
+        border: solid;
+        border-width: thin;
+        padding-left: 5px;
+        padding-right: 5px;
+		text-align:center;
+}
+/************************** Georgi fin tabla de creaciones**************************************************/
+/************************** AQUI EMPIEZAN LAS MODIFICACIONES DE LIDIA **************************************/
+
+ul.listObj{
+	overflow: auto;
+	border: 1px solid black ;
+	display: inline-block;
+	padding: 2%;
+	box-shadow: 2px 2px 2px #303030;
+	background:#CDCDCD;
+	border-radius: 5px;
+}
+
+li.item{
+	color: black;
+	margin:20px 10px 20px 10px;
+	display: inline-block;
+	width: 150px;
+	height: 110px;
+	box-shadow: 2px 2px 2px #303030;
+	background:#AAAAAA;
+	border-radius: 5px;
+	text-align: center;
+	font-weight: bold;
+}
+
+img.imgObj {
+	height: 100px;
+	max-width: 148px;
+}
+
+ul a {
+	text-decoration: none;
+}
+
+
+/************************** AQUI TERMINAN LAS MODIFICACIONES DE LIDIA **************************************/
