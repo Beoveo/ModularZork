@@ -1,6 +1,6 @@
 
 var panel = $('#zork-area');
-var counterStart = 40;
+var counterStart = 30;
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -16,12 +16,12 @@ $(document).on('click', '.answer-button', function(e) {
 });
 
 $(document).on('click', '#start', function(e) {
-  $('#subwrapper').prepend('<h2>Tiempo para contestar: <span id="counter-number">40</span> segundos</h2>');
+  $('#subwrapper').prepend('<h2>Tiempo para contestar: <span id="counter-number">30</span> segundos</h2>');
   game.loadQuestion();
 });
 
 ///////////////////////////////////////////////////////////////////////////////
-//questiones a resolver 
+//cuestiones a resolver 
 ///////////////////////////////////////////////////////////////////////////////
 
 var questions = [{
@@ -36,20 +36,33 @@ var questions = [{
   image:"zork/juegoimg/p1/calabozocerrado.png"
 }, {
   question: "Has encontrado una llave!!, prueba abrir la puerta",
-  answers: ["Abrir la puerta y salir"],
-  correctAnswer: "Abrir la puerta y salir",
-  image:"zork/juegoimg/p1/calabozollave.png"
+  answers: ["Coger la llave y salir"],
+  correctAnswer: "Coger la llave y salir",
+  image:"zork/juegoimg/p1/calabozollave.png",
+  llave: 1
 }, {
   question: "Esta sala ya tiene mejor pinta, puedes subir las escaleras, ir hacia el Este o al Norte",
-  answers: ["Subir escaleras", "Ir al Este", "Ir al Norte", "Coger espada"],
+  answers: ["Ir al Este", "Coger espada"],
   correctAnswer: "All",
   image:"zork/juegoimg/p2/salaSupClabozoEspada.png",
-  image2:"zork/juegoimg/p2/salaSupClabozoManoEspada.png"
+  espada: 1
+},{
+  question: "Estas en la sala encima de los calabozos, puedes subir las escaleras, ir hacia el Este o al Norte",
+  answers: ["Ir al Este"],
+  correctAnswer: "All",
+  image:"zork/juegoimg/p2/salaSupClabozo.png",
 }, {
   question: 'Un Orco!!!!! toma una decisión rapido!!!',
   answers: ["Volver", "Atacar"],
   correctAnswer: "All",
-  image:"zork/juegoimg/p2/salaSupClabozoEste.png"
+  image:"zork/juegoimg/p2/salaSupClabozoEste.png",
+  orco: 1
+}, {
+  question: 'Has derrotado al Orco!!!, sal corriendo de este sitio!!!!',
+  answers: ["Salir"],
+  correctAnswer: "Salir",
+  image:"zork/juegoimg/p2/salaSupClabozoEsteSinOrco.png",
+  
 }];
 
 
@@ -60,6 +73,9 @@ var game = {
   currentQuestion:0,
   counter:counterStart,
   espada:0,
+  lives: 10,
+  llaves: 0,
+  
 
   countdown: function(){
     game.counter--;
@@ -73,24 +89,24 @@ var game = {
   loadQuestion: function(){
     timer = setInterval(game.countdown, 1000);
 
+    
     panel.html('<h2>' + questions[this.currentQuestion].question + '</h2>' );
-    if(game.espada === 0){
-      panel.append('<img src="' + questions[this.currentQuestion].image + '" />');
-    }
-    else{
-      panel.append('<img src="' + questions[this.currentQuestion].image2 + '" />');
-    }
+
+    panel.append('<h4>Vida: ' + this.lives + ' - Espadas: ' + this.espada  + ' - Llaves: ' + this.llaves + "</h4>");
+   
+    panel.append('<img src="' + questions[this.currentQuestion].image + '" />');
+    
     for (var i = 0; i<questions[this.currentQuestion].answers.length; i++){
       panel.append('<button class="answer-button" id="button"' + 'data-name="' + questions[this.currentQuestion].answers[i] + '">' + questions[this.currentQuestion].answers[i]+ '</button>');
     }
     
   },
-  current: function(){
+  /*current: function(){
     game.counter = couterStart;
     $('#counter-number').html(game.counter);
-    game.currentQuestion;
+    game.currentQuestion ;
     game.loadQuestion();
-  },
+  },*/
   nextQuestion: function(indice) {
     game.counter = counterStart;
     $('#counter-number').html(game.counter);
@@ -108,8 +124,9 @@ var game = {
   results: function() {
     clearInterval(timer);
 
-    panel.html('<h2>Resultados de como has terminado!</h2>');
-    $('#counter-number').html(game.counter);
+    panel.html('<h2>Fin de la demo!</h2>');
+    panel.append('<p>En breve prodrás disfrutar de más aventuras con zork y crear tus propios nivels</p>');
+    //panel.append('<img src= zork/juegoimg/logo.png />');
     //poner timepo , vida, ...
     panel.append('<br><button id="start-over">Start Over?</button>');
   },
@@ -118,21 +135,56 @@ var game = {
 
     if(questions[this.currentQuestion].correctAnswer === "All"){ //Varias respuestas
         if ($(e.target).data("name") === "Ir al Este" ){
-          this.answeredCorrectly(1);
+          if (questions[this.currentQuestion].espada === 1){
+            this.answeredCorrectly(2);
+          }
+          else{
+            this.answeredCorrectly(1);
+          }
         }
-        else if($(e.target).data("name") === "Coger espada"){
-          game.espada++;
-          this.answeredCorrectly(0);
-        }
-        else if($(e.target).data("name") === "Volver"){
-          this.answeredCorrectly(-1);
+        /*else if($(e.target).data("name") === "Ir al Oeste"){
+          this.answeredCorrectly(-2);
         }
         else if($(e.target).data("name") === "Ir al Norte"){
           this.answeredCorrectly(2);
+        }*/
+        else if($(e.target).data("name") === "Coger espada"){
+          questions[this.currentQuestion].espada--;
+          game.espada++;
+          this.answeredCorrectly(1);
         }
+        else if($(e.target).data("name") === "Volver"){
+          if (this.espada === 0){
+            this.answeredCorrectly(-2);
+          }
+          else
+            this.answeredCorrectly(-1);
+        }
+        
+        else if($(e.target).data("name") === "Atacar"){
+          if(this.espada = 1){
+            this.lives -= 1.5;
+          }
+          else{
+            this.lives -= 3.5;
+          }
 
+          if(this.lives <= 0){
+            game.results();
+          }
+          else{
+            questions[this.currentQuestion].orco--;
+            this.answeredCorrectly(1);
+          }
+        }
+       
+    } else if ($(e.target).data("name") === "Coger la llave y salir"){
+       questions[this.currentQuestion].llave--;
+       this.llave++;
+       this.answeredCorrectly(1);
 
-    } else {
+    }
+    else {
         if ($(e.target).data("name") === questions[this.currentQuestion].correctAnswer){
           this.answeredCorrectly(1);
         } else {
@@ -143,21 +195,21 @@ var game = {
   answeredIncorrectly: function() {
 
     clearInterval(timer);
-    panel.html('<h2>Imposible!</h2>');
+    panel.html('<h2>No es buena idea!</h2>');
     panel.append('<h3>Intentalo de nuevo!! </h3>');
-    panel.append('<img src="' + questions[game.currentQuestion].image + '" />');
-
-    setTimeout(game.current, 1000);
+    setTimeout(game.nextQuestion, 1000, 0);
 
   },
   answeredCorrectly: function(indice){
     clearInterval(timer);
-
     panel.html('<h2>Perfecto!!! continuemos</h2>');
-    panel.append('<img src="' + questions[game.currentQuestion].image + '" />');
-
     
+    if (game.currentQuestion === questions.length - 1){// si he llegado al final 
+      setTimeout(game.results, 500);
+    }
+    else{
       setTimeout(game.nextQuestion, 1000, indice);
+    }
    
   },
   reset: function(){

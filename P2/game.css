@@ -11,7 +11,7 @@ button{
   border:none;
   cursor: pointer;
   background:transparent;
-  font-size: 42px;;
+  font-size: 30px;;
 }
 
 
@@ -21,14 +21,14 @@ button{
 
 h2{
   font-size: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 17px;
 }
 
 
 img{
-  height:600px;
-  /*max-width:110%;
-    height:auto;*/
+  /*height:10px;*/
+  max-width:100%;
+    height:auto;
 }
 #start{
   margin-top: 20%;
