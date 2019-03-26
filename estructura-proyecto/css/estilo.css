@@ -12,8 +12,58 @@ div#contenedor {
 	background-color: #aaaaaa;
 	margin-top: 30px;
 }
+/*****ALBERTO CAMBIOS CSS***/
+div#imagenFromulario
+{
+    float:left;
+}
+div#infoPerfil{
+    float:right;
+    
+}
+div#infoPerfil a{
+    background-color: #555;
+	float: auto;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 20px;
+	font-size: 14px;
+    margin-right:40px;
+}
+img#imgMiembro3{
+    width: 200px;
+    height: 200px;
+    
+}
+input[type="file"] {
+   background-color: rgb(170, 20, 93);
+   border: none;
+   border-radius: 6px;
+   color: white;
+   display: block;
+   font-size: 1em;
+   height: 3em;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: -10px;
+   text-align: center;
+   width: 150px;
+}
 
+div#sidebar-right {
+	padding: 10px;
+    float:right;
+	width: 250px;
+	height: 700px;
+	background-color: #dddddd;
+}
 
+div#sidebar-right a, div#sidebar-right a:visited {
+	color: gray;
+	font-weight: bold;
+	text-decoration: none;
+} 
+/*****ALBERTO CAMBIOS CSS***/
 div#cabecera {
 
 	padding: 30px;
@@ -51,21 +101,6 @@ div#cabecera a:hover {
 	color: red;
 	font-weight: bold;
 	text-decoration: underline;
-} 
-
-
-
-div#sidebar-right {
-	padding: 10px;
-	float: right;
-	width: 250px;
-	height: 700px;
-	background-color: #dddddd;
-}
-div#sidebar-right a, div#sidebar-right a:visited {
-	color: gray;
-	font-weight: bold;
-	text-decoration: none;
 } 
 
 div#pie a {
@@ -320,6 +355,7 @@ input[type="submit"] {
    width: 150px;
 }
 
+
 input[type="submit"]:hover {
    cursor: pointer;
    background-color: rgb(204, 69, 134);
@@ -426,3 +462,41 @@ div#contenidoNoticias{
 	margin: 5px 5px 5px 5px;
 }
 /************************** AQUI ACABAN LAS MODIFICACIONES DE BEA **************************************************/
+/************************** Georgi  tabla de creaciones**************************************************/
+div.misCreaciones
+{
+            display: table;
+			width: 100%;
+}
+div.Table
+{
+        display: table;
+		width: 100%;
+}
+div.Title
+{
+        display: table-caption;
+        text-align: center;
+        font-weight: bold;
+        font-size: larger;
+}
+div.Heading
+{
+        display: table-row;
+        font-weight: bold;
+        text-align: center;
+}
+div.Row
+{
+        display: table-row;
+}
+div.Cell
+{
+        display: table-cell;
+        border: solid;
+        border-width: thin;
+        padding-left: 5px;
+        padding-right: 5px;
+		text-align:center;
+}
+/************************** Georgi fin tabla de creaciones**************************************************/

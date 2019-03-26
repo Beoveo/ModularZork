@@ -16,13 +16,7 @@ $app->doInclude('comun/cabecera.php');
 echo "<div id='sidebar-left'>";
 $app->doInclude('comun/menuSideBarIzq.php');
 echo"<img src='img/poster.jpg' alt=''/> <img src='img/poster1.jpg'alt=''/> </div>";
-?>
-
-        <?php
-		include('contenidoCreacion.php'); 
-        ?>
-
-<?php
+$app->doInclude('contenidos/contenidoCreacion2.php'); 
 $app->doInclude('comun/sidebarDer.php');
 $app->doInclude('comun/pie.php');
 ?>

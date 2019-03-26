@@ -23,7 +23,7 @@ echo'
         <p>Tres de los programadores originales de Zork se juntaron con otros para fundar Infocom en 1979. Esa compañía adaptó el Zork del PDP-10 y desarrolló los Zork I, II y III, una trilogía de juegos para la mayoría de las pequeñas computadoras populares de la época, incluyendo el Apple II, el Commodore 64, la familia Atari de 8 bits, el TRS-80, sistemas CP/M y el IBM PC. Zork I fue publicado en discos flexibles de 5 ¼"y 8". Joel Berez y Marc Blank desarrollaron una máquina virtual especializada para ejecutar Zork I, llamada la Máquina-Z. El primer "Z-machine Interpreter Program" (ZIP) (Programa Interpretador de Máquina-Z) para una pequeña computadora fue escrito por Scott Cutler para el TRS-80. La trilogía fue escrita en ZIL, que significa "Zork Implementation Language" (Lenguaje de Implementación Zork), un lenguaje similar a LISP.</p>
 </div>
 </div>';
-    include('contenidoCreacion.php');
+    $app->doInclude('contenidos/contenidoCreacion1.php');
     $app->doInclude('comun/sidebarDer.php');
     $app->doInclude('comun/pie.php');
 ?>
