@@ -1,0 +1,44 @@
+body {
+	font-family: 'Helvetica Neue';
+	background-color: #CDCDCD;
+
+}
+button{
+  display:block;
+  width:50%;
+  height:20%;
+  margin: 0 auto;
+  border:none;
+  cursor: pointer;
+  background:transparent;
+  font-size: 30px;;
+}
+
+
+#subwrapper{
+  position: relative;
+}
+
+h2{
+  font-size: 20px;
+  margin-bottom: 17px;
+}
+
+
+img{
+  /*height:10px;*/
+  max-width:100%;
+    height:auto;
+}
+#start{
+  margin-top: 20%;
+  border:2px solid black;
+  background: grey;
+}
+
+
+
+button:hover {
+  border:2px solid blak;
+  background: grey;
+}

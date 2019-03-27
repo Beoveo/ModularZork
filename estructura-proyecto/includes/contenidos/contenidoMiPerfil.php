@@ -1,8 +1,7 @@
 <div id="contenido">
     <div id="imagenFromulario">
-     <img id ="imgMiembro3" src="img/geo.png" alt=""/>
+     <img id ="imgPerf" src="img/agu.png" alt=""/>
      <form name="uploadimage" type="POST" enctype="multipar/fromdata">
-        
         <input type="file" name="imagen"/>
         <input type="submit" name="uploadimage" value="Subir imagen"/> 
      </form>

@@ -1,4 +1,3 @@
-
 <div id="contenidocreacion">
 	<!-- Paginacion de resultados: https://www.jose-aguilar.com/blog/paginacion-resultados-con-php/-->
 	<div id="eligemapa">
