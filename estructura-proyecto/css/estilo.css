@@ -12,58 +12,7 @@ div#contenedor {
 	background-color: #aaaaaa;
 	margin-top: 30px;
 }
-/*****ALBERTO CAMBIOS CSS***/
-div#imagenFromulario
-{
-    float:left;
-}
-div#infoPerfil{
-    float:right;
-    
-}
-div#infoPerfil a{
-    background-color: #555;
-	float: auto;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px 20px;
-	font-size: 14px;
-    margin-right:40px;
-}
-img#imgPerf{
-    width: 200px;
-    height: 200px;
-    
-}
-input[type="file"] {
-   background-color: rgb(170, 20, 93);
-   border: none;
-   border-radius: 6px;
-   color: white;
-   display: block;
-   font-size: 1em;
-   height: 3em;
-   margin-left: auto;
-   margin-right: auto;
-   margin-top: -10px;
-   text-align: center;
-   width: 150px;
-}
 
-div#sidebar-right {
-	padding: 10px;
-    float:right;
-	width: 250px;
-	height: 700px;
-	background-color: #dddddd;
-}
-
-div#sidebar-right a, div#sidebar-right a:visited {
-	color: gray;
-	font-weight: bold;
-	text-decoration: none;
-} 
-/*****ALBERTO CAMBIOS CSS***/
 div#cabecera {
 
 	padding: 30px;
@@ -536,3 +485,75 @@ ul a {
 
 
 /************************** AQUI TERMINAN LAS MODIFICACIONES DE LIDIA **************************************/
+/****************************************************ALBERTO CAMBIOS CSS*************************************/
+div#imagenFromulario
+{
+    float:left;
+}
+div#infoPerfil{
+    float:right;
+    
+}
+div#infoPerfil a{
+    background-color: #555;
+	float: auto;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 20px;
+	font-size: 14px;
+    margin-right:40px;
+}
+img#imgPerf{
+    width: 200px;
+    height: 200px;
+    
+}
+input[type="file"] {
+   background-color: rgb(170, 20, 93);
+   border: none;
+   border-radius: 6px;
+   color: white;
+   display: block;
+   font-size: 1em;
+   height: 3em;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: -10px;
+   text-align: center;
+   width: 150px;
+}
+
+div#sidebar-right {
+	padding: 10px;
+    float:right;
+	width: 250px;
+	height: 700px;
+	background-color: #dddddd;
+}
+
+div#sidebar-right a, div#sidebar-right a:visited {
+	color: gray;
+	font-weight: bold;
+	text-decoration: none;
+} 
+/****************************************************ALBERTO CAMBIOS CSS*************************************/
+/****************************************************AGUSTIN CAMBIOS CSS*************************************/
+
+div.saludo {
+	width: 100%;
+	text-align: right;
+}
+
+#imgjuego {
+
+    max-width:110%;
+    height:auto;
+   
+}
+#imgbarril {
+
+    max-width:10%;
+    height:auto;
+   
+}
+/****************************************************AGUSTIN CAMBIOS CSS*************************************/

@@ -1,0 +1,70 @@
+/* Contenedor del login */
+
+#formulario {
+   font-family: 'Helvetica Neue'; 
+   background-color: #303030;
+   border-radius: 8px;
+   
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 10%;
+   /*mueve hacia abajo*/
+   max-width: 20em;
+   /*expande arriba y abajo*/
+   padding-bottom: 10px;
+   padding-top: 10px;
+}
+
+#formulario h3{
+   color: white;
+   text-align: center;
+}
+
+/* Etiquetas del formulario */
+
+#formulario label {
+   text-align: center;
+   color: white;
+   display: block;
+   margin-bottom: 6px;
+   margin-left: 1.2em;
+}
+
+/* Campos del formulario */
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+   border: none;
+   border-radius: 6px;
+   display: block;
+   font-size: 1em;
+   height: 2em;
+   text-align: center;
+   width: 90%;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+/* Botón */
+
+input[type="submit"] {
+   background-color: #A3A0A2;
+   border: none;
+   border-radius: 6px;
+   color: white;
+   display: block;
+   font-size: 1em;
+   height: 3em;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: -10px;
+   text-align: center;
+   width: 150px;
+}
+
+input[type="submit"]:hover {
+   cursor: pointer;
+   background-color: #A33D41;
+   opacity: 0.8;
+}
