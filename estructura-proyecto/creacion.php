@@ -17,7 +17,6 @@ require_once __DIR__.'/includes/config.php';
     $app->doInclude('comun/sidebarIzq.php');
     echo"</div>";
     $app->doInclude('contenidos/contenidoCreacion1.php');
-    $app->doInclude('comun/sidebarDer.php');
     $app->doInclude('comun/pie.php');
 ?>
 </div>
